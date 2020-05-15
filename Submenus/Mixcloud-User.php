@@ -23,7 +23,14 @@
 </nav>
   <div id="content" class="tg-content animated fadeIn delay-1s">
     <br>
-    <h1> Shows Matching <?php echo $_GET['show'];?></h1>
+    <h1> Shows Matching <?php
+if(isset($_GET['show'])){
+  echo $_GET['show'];
+}
+else{
+  echo $_GET['user'];
+}
+?></h1>
     <?php
     require('../Backend/Update-User-Specific-Show.php');
     ?>
